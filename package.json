@@ -1,0 +1,51 @@
+{
+  "name": "nexo",
+  "version": "1.0.0",
+  "description": "Create Discord Bot Projects",
+  "main": "./lib/index.js",
+  "bin": {
+    "nexo": "./bin/index.ts"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.5.2",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^8.1.5",
+    "inversify": "^5.1.1",
+    "kleur": "^4.1.4",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^10.2.1",
+    "typedoc": "^0.22.5",
+    "typescript": "^4.4.3",
+    "tslib": "^2.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "npm run build && npm run global",
+    "build": "npm run clean:some && tsc -p .",
+    "global": "npm i -g && nexo",
+    "clean:some": "rm -rf ./lib ./docs",
+    "clean:all": "rm -rf ./node_modules ./package-lock.json ./lib ./docs",
+    "refresh": "npm run clean:all && npm install",
+    "tscov": "tscov --min-coverage 90",
+    "tscov:d": "tscov --details",
+    "publish-package": "npm run build && npm publish",
+    "docs": "typedoc --out docs ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jusoftdev/nexo.git"
+  },
+  "author": "JuSoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jusoftdev/nexo/issues"
+  },
+  "homepage": "https://github.com/jusoftdev/nexo#readme"
+}
