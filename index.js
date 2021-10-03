@@ -1,0 +1,2 @@
+/* ... later ... */
+var hi = greet();
