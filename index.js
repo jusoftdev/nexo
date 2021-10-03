@@ -1,2 +1,0 @@
-/* ... later ... */
-var hi = greet();
