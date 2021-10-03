@@ -7,8 +7,11 @@
     "outDir": "lib",
     "rootDir": "src",
     "strict": true,
-    "types": ["node"],
+    "types": ["node", "inquirer", "figlet", "fs-extra"],
+    "experimentalDecorators": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true
-  }
+    "resolveJsonModule": true,
+    "importHelpers": true
+  },
+  "exclude": ["node_modules", "lib", "templates"]
 }
